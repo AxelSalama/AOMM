@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EligeResp : MonoBehaviour
 {
@@ -19,12 +20,12 @@ public class EligeResp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        puntaje.text = "puntaje = "+contador.ToString();
+        puntaje.text = "Puntaje = "+contador.ToString();
 
-        if (contador >= 9)
+        if (contador > 9)
         {
             //aca se abre la puerta al castillo y te deja pasar
-            
+            SceneManager.LoadScene("Reino multi");
         }
     }
 
